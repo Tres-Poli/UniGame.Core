@@ -23,12 +23,12 @@
 
             if (UseMaxValocity && Rigidbody2D.linearVelocity.sqrMagnitude > _sqrMaxValocity)
             {
-                Rigidbody2D.linearVelocity = Rigidbody2D.linearVelocity.normalized * MaxVelocity;
+                Rigidbody2D.velocity = Rigidbody2D.velocity.normalized * MaxVelocity;
             }
 
             if (UseMinValocity && Rigidbody2D.linearVelocity.sqrMagnitude < _sqrMinVelocity)
             {
-                Rigidbody2D.linearVelocity = Rigidbody2D.linearVelocity.normalized * MinVelocity;
+                Rigidbody2D.velocity = Rigidbody2D.velocity.normalized * MinVelocity;
             }
 
         }
